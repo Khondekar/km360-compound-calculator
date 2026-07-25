@@ -1,0 +1,516 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#111827;
+    color:#fff;
+}
+
+.container{
+    width:1100px;
+    max-width:95%;
+    margin:auto;
+    padding:30px;
+}
+
+.calculator{
+    width:100%;
+    background:#1b2430;
+    border:1px solid #475569;
+    border-radius:14px;
+    padding:25px;
+}
+
+/* ---------------- Currency ---------------- */
+
+h3{
+    margin-bottom:15px;
+}
+
+.currency{
+    display:flex;
+    margin-bottom:25px;
+}
+
+.currency button{
+    flex:1;
+    height:55px;
+    background:#233041;
+    color:#fff;
+    border:1px solid #475569;
+    cursor:pointer;
+    font-size:22px;
+    transition:.3s;
+}
+
+.currency button:first-child{
+    border-radius:10px 0 0 10px;
+}
+
+.currency button:last-child{
+    border-radius:0 10px 10px 0;
+}
+
+.currency button.active{
+    background:#d97706;
+}
+
+/* ---------------- Input Group ---------------- */
+
+.input-group{
+    margin-top:22px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+/* ---------------- Principal ---------------- */
+
+.money-input{
+    display:flex;
+    align-items:center;
+    background:#333;
+    border:1px solid #555;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.money-input span{
+    width:60px;
+    text-align:center;
+    font-size:34px;
+    color:#fff;
+}
+
+.money-input input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#fff;
+    font-size:40px;
+    font-weight:bold;
+    padding:18px;
+}
+
+/* ---------------- Rate ---------------- */
+
+.rate-row{
+    display:flex;
+    gap:10px;
+}
+
+.rate-input{
+    flex:1;
+    position:relative;
+}
+
+.rate-input input{
+    width:100%;
+    height:55px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    padding:0 50px 0 15px;
+    font-size:22px;
+}
+
+.rate-input span{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#999;
+    font-size:24px;
+}
+
+#frequency{
+    width:120px;
+    height:55px;
+    background:#3a3737;
+    color:#fff;
+    border:1px solid #555;
+    border-radius:10px;
+    padding:0 10px;
+    font-size:18px;
+}
+
+/* ---------------- Days ---------------- */
+
+#days{
+    width:100%;
+    height:55px;
+    background:#3a3737;
+    color:#fff;
+    border:1px solid #555;
+    border-radius:10px;
+    padding:0 15px;
+    font-size:22px;
+}
+
+/* ---------------- Lot ---------------- */
+
+#lot{
+    width:100%;
+    height:55px;
+    background:#3a3737;
+    color:#fff;
+    border:1px solid #555;
+    border-radius:10px;
+    padding:0 15px;
+    font-size:22px;
+}
+
+/* ---------------- Dates ---------------- */
+
+.date-row{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.date-box{
+    flex:1;
+}
+
+.date-box label{
+    display:block;
+    margin-bottom:8px;
+}
+
+.date-box input{
+    width:100%;
+    height:55px;
+    background:#3a3737;
+    color:#fff;
+    border:1px solid #555;
+    border-radius:10px;
+    padding:0 15px;
+}
+
+/* ---------------- Button ---------------- */
+
+#calculate{
+    width:100%;
+    height:60px;
+    margin-top:25px;
+    background:#73a72c;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#calculate:hover{
+    background:#5f8f20;
+}
+
+/* ---------------- Result ---------------- */
+
+.result{
+    margin-top:40px;
+}
+
+.result h2{
+    color:#f59e0b;
+    margin-bottom:20px;
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.card{
+    background:#202938;
+    padding:20px;
+    border-radius:12px;
+}
+
+.card h4{
+    color:#9ca3af;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#6ee76e;
+    font-size:30px;
+}
+
+/* ---------------- Table ---------------- */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    color:#fff;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #374151;
+}
+
+tr:nth-child(even){
+    background:#1f2937;
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media(max-width:768px){
+
+.container{
+    padding:15px;
+}
+
+.rate-row{
+    flex-direction:column;
+}
+
+#frequency{
+    width:100%;
+}
+
+.date-row{
+    flex-direction:column;
+}
+
+.result-grid{
+    grid-template-columns:1fr;
+}
+
+.money-input input{
+    font-size:28px;
+}
+
+}
+/* ===========================
+   Footer
+=========================== */
+
+.footer{
+
+    margin-top:40px;
+
+    padding:30px;
+
+    background:#202938;
+
+    border-radius:12px;
+
+    text-align:center;
+
+}
+
+.footer h3{
+
+    color:#f59e0b;
+
+    margin-bottom:8px;
+
+    font-size:24px;
+
+}
+
+.author{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+}
+
+.tagline{
+
+    color:#6ee76e;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+}
+
+.footer hr{
+
+    border:none;
+
+    height:1px;
+
+    background:#475569;
+
+    margin:20px 0;
+
+}
+
+.copyright{
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+.disclaimer{
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+.footer{
+
+    margin-top:40px;
+
+    background:#202938;
+
+    border-radius:15px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.logo-circle{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#f59e0b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.footer h2{
+
+    color:#f59e0b;
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+.footer h3{
+
+    color:white;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.green{
+
+    color:#57e557;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+.small{
+
+    color:#bfc8d4;
+
+    font-size:16px;
+
+}
+
+.footer hr{
+
+    margin:30px 0;
+
+    border:none;
+
+    height:1px;
+
+    background:#475569;
+
+}
+
+.footer-middle{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+}
+
+.footer-middle h4{
+
+    color:#f59e0b;
+
+    margin-bottom:8px;
+
+}
+
+.footer-middle p{
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.footer-bottom p{
+
+    color:white;
+
+    margin-bottom:12px;
+
+}
+
+.disclaimer{
+
+    color:#9ca3af;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
